@@ -1,0 +1,44 @@
+%h1 Avaible Routes
+%p	POST  |  /api/:version/users/sign_in(.json)  |  v1  |  user sign_in    
+%p   POST  |  /api/:version/users/sign_up(.json)  |  v1  |  user sign_up    
+%p    GET  |  /api/:version/tasks(.json)          |  v1  |  Return all Tasks
+%p    POST  |  /api/:version/tasks(.json)          |  v1  |  Create Tasks    
+
+
+
+%h2  Assumptions for the task i need to take 
+
+
+%p participant user cannot login to ui but can create account 
+
+%p Admin can also use the apis to create task and login
+
+%p Normal devise links like forgot password and blah blah is not created
+
+%p As i was not mentioned any specific routes for api i created it my own way
+
+%p we are not storing any user data in tasks ( like who created the tasks and stuff )
+
+%p  there is not much haml code here, i am not that proficient at but i can manage 
+
+%p Do tell me if u have any other questions
+
+
+
+%h2 Database structure
+
+%p user -> roles_users <- roles
+
+%p user -> tokens
+
+
+%h2 Tech Specifications:
+
+%p  Language: Ruby 
+
+%p  Framework: Rails
+
+%p  Database: Mysql
+
+%p templating engine: HAML
+
