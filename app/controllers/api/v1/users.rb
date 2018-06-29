@@ -17,7 +17,6 @@ module API
               if user.valid_password?(params[:password])
                 {message: 'successfull logged in', token: user.create_token}
               else
-                # {error: 'invalid password'}
                 error! 'invalid password', 404
               end
 

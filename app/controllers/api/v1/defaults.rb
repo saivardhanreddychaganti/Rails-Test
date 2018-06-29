@@ -3,6 +3,8 @@ module API
     module Defaults
       extend ActiveSupport::Concern
 
+
+
       included do
         prefix "api"
         version "v1", using: :path
@@ -26,6 +28,17 @@ module API
               else
                 error! 'invalid token please check', 404
               end
+            end
+          end
+
+
+          def token_user    
+            if params[:token].nil?
+              nil
+            else
+              user = UserToken.where(token: params[:token]).first.user
+              @current_ability ||= Ability.new(user)
+              return user
             end
           end
 
